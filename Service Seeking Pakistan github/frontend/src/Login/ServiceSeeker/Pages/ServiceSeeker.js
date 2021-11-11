@@ -10,7 +10,7 @@ import Nav from '../../../Ui/Navbar/Nav';
 //Importing Css
 import classes from './ServiceSeeker.css';
 
-const ServiceSeeker = () => {
+const ServiceSeeker = (props) => {
     return(
         <Aux>
             <Nav 
@@ -21,6 +21,38 @@ const ServiceSeeker = () => {
             />
             <div className={classes.outerDiv}>
                 <h1 className={classes.signup}>SignUp</h1>
+            </div>
+            <div className={classes.outerDiv1}>
+                <form>
+                    <input 
+                        value={props.user.fname}
+                        onChange={props.handleInput}
+                        name="fname" 
+                        placeholder="Enter First Name"/>
+                    <br />
+                    <br />
+                    <input 
+                        value={props.user.lname}
+                        onChange={props.handleInput}
+                        name="lname" 
+                        placeholder="Enter Last Name"/>
+                    <br />
+                    <br />
+                    <input
+                        value={props.user.password}
+                        onChange={props.handleInput} 
+                        name="password" 
+                        placeholder="Enter Password"/>
+                    <br />
+                    <br />
+                    <input 
+                        value={props.user.retype}
+                        onChange={props.handleInput}
+                        name="retype" 
+                        placeholder="Renter Password"/>
+                    <br />
+                    <button onClick={props.PostData} className={classes.button}>SignUp</button>
+                </form>
             </div>
         </Aux>
     )

@@ -10,7 +10,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 //Importing Login
 import Login from './Login/Pages/Login';
 
-import ServiceSeeker from './Login/ServiceSeeker/Pages/ServiceSeeker';
+import ServiceSeekerC from './Login/ServiceSeeker/Components/ServiceSeekerC';
 
 //App Function
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/login" element={<Login />}/>
       </Routes>
       <Routes>
-        <Route path="/serviceSeeker" element={<ServiceSeeker />}/>
+        <Route path="/serviceSeeker" element={<ServiceSeekerC />}/>
       </Routes>
     </Router>
   );
